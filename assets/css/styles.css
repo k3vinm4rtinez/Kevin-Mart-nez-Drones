@@ -1,0 +1,388 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #10201f;
+    font-family: 'Share Tech Mono';
+}
+
+.visible {
+    visibility: visible;
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10rem;
+    z-index: 10;
+}
+
+.container_open, .container_close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: #79fff8;
+    padding: 0.5rem;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.container_open img, .container_close img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+}
+
+.container_close {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    visibility: hidden;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 18rem;
+    height: 4rem;
+    font-size: 25px;
+    background-color: #214543;
+    color: #79fff8;
+    padding: 0.5rem;
+    padding-left: 4rem;
+    padding-right: 14rem;
+    border-radius: 10rem;
+    overflow: hidden;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu hr {
+    border: solid 1px white;
+    height: 60%;
+    opacity: .5;
+    margin: 1rem;
+}
+
+/* HEADER */
+
+header {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.video_header {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container_name {
+    background-color: #10201faf;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+}
+
+.name {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    top: 0;
+    padding: 5rem;
+    background-color: #ffffff19;
+    backdrop-filter: blur(1rem);
+    border-radius: 2rem;
+    margin-left: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.blur_ball_1 {
+    position: absolute;
+    top: -3rem;
+    right: -3rem;
+    background-color: #79fff8;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(4rem);
+}
+
+.blur_ball_2 {
+    position: absolute;
+    bottom: -3rem;
+    left: -3rem;
+    background-color: #79fff8;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(4rem);
+}
+
+.blur_ball_3 {
+    position: absolute;
+    top: -3rem;
+    left: 0;
+    background-color: #79fff83f;
+    width: 50rem;
+    height: 25rem;
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(6rem);
+}
+
+.blur_ball_4 {
+    position: absolute;
+    bottom: 10rem;
+    right: 10rem;
+    background-color: #79fff8;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(2rem);
+}
+
+.name h1 {
+    font-size: 150px;
+    margin: 0;
+    color: #ffffff;
+    line-height: 12rem;
+    font-family: 'Unbounded';
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.name h2 {
+    font-size: 60px;
+    margin: 0;
+    background: -webkit-linear-gradient(0deg, #bffffc, #79fff8, #12938c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 4rem;
+    z-index: 10;
+}
+
+/* DRONES */
+
+.drones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.cinequeen {
+    width: 50rem;
+    position: relative;
+    margin: 1rem;
+}
+
+.dji {
+    width: 50rem;
+    aspect-ratio: 16/9;
+    position: relative;
+    margin: 1rem;
+}
+
+.drone_title {
+    color: #79fff8;
+}
+
+.drone_title h1 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.bg_video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* ANIMACIONES */
+
+@keyframes toleft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes toright {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes rotateRight {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotateLeft {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes asdas {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(200%);
+    }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1500px) {
+
+    /* Header */
+
+    .name h1 {
+        font-size: 150px;
+        line-height: 10rem;
+    }
+
+    .name h2 {
+        font-size: 50px;
+        line-height: 2.5rem;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    /* Header */
+
+    .name h1 {
+        font-size: 120px;
+        line-height: 8rem;
+    }
+
+    .name h2 {
+        font-size: 40px;
+        line-height: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* Header */
+
+    .name {
+        width: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        line-height: 6rem;
+        background-image: none;
+        padding: 4rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        text-align: left;
+    }
+
+    .name h1 {
+        font-size: 90px;
+        line-height: 6rem;
+    }
+
+    .name h2 {
+        font-size: 30px;
+        line-height: 1.5rem;
+    }
+}
+
+@media (max-width: 750px) {
+
+    /* Header */
+
+    .name h1 {
+        font-size: 70px;
+        line-height: 5rem;
+    }
+
+    .name h2 {
+        font-size: 24px;
+        line-height: 1rem;
+    }
+
+    /* Nav */
+
+    .container_open, .container_close {
+        width: 3rem;
+        height: 3rem;
+        padding: 0.5rem;
+    }
+
+    .menu ul {
+        font-size: 18px;
+        width: 12rem;
+        height: 3rem;
+        padding: 0.2rem;
+        padding-left: 3rem;
+        padding-right: 14rem;
+    }
+
+
+}
+
+@media (max-width: 550px) {
+
+    /* Header */
+
+    .name h1 {
+        font-size: 50px;
+        line-height: 4rem;
+    }
+
+    .name h2 {
+        font-size: 17px;
+        line-height: 0.5rem;
+    }
+}

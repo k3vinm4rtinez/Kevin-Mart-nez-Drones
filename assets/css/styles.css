@@ -138,7 +138,7 @@ header {
     margin: 0;
     background: linear-gradient(to right, #565656, #848484, #9d9d9d, #c2c2c2, #e6e6e6, #ffffff, #e6e6e6, #c2c2c2, #9d9d9d, #848484, #565656);
     background-size: 200% 200%;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: 10;
     animation: h2_gradient 3s ease-in infinite;

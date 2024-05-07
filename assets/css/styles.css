@@ -1,7 +1,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
-    background-color: #10201f;
+    background-color: #121212;
     font-family: 'Share Tech Mono';
 }
 
@@ -21,7 +21,7 @@ nav {
     overflow: hidden;
     width: 100%;
     border-radius: 10rem;
-    z-index: 10;
+    z-index: 2000;
 }
 
 .container_open, .container_close {
@@ -30,7 +30,7 @@ nav {
     justify-content: center;
     width: 4rem;
     height: 4rem;
-    background-color: #79fff8;
+    background-color: #c2ff32;;
     padding: 0.5rem;
     border-radius: 50%;
     z-index: 1000;
@@ -60,14 +60,13 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 18rem;
     height: 4rem;
     font-size: 25px;
-    background-color: #214543;
-    color: #79fff8;
+    background-color: #000000;
+    color: #c2ff32;;
     padding: 0.5rem;
     padding-left: 4rem;
-    padding-right: 14rem;
+    padding-right: 8rem;
     border-radius: 10rem;
     overflow: hidden;
 }
@@ -76,10 +75,11 @@ nav {
     display: flex;
     align-items: center;
     height: 100%;
+    cursor: pointer;
 }
 
 .menu hr {
-    border: solid 1px white;
+    border: solid 1px #bdbdbd;
     height: 60%;
     opacity: .5;
     margin: 1rem;
@@ -100,7 +100,7 @@ header {
 }
 
 .container_name {
-    background-color: #10201faf;
+    background-color: #0000006f;
     width: 100%;
     height: 100%;
     display: flex;
@@ -112,125 +112,270 @@ header {
 
 .name {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     z-index: 1;
     top: 0;
     padding: 5rem;
-    background-color: #ffffff19;
-    backdrop-filter: blur(1rem);
     border-radius: 2rem;
-    margin-left: 2rem;
     position: relative;
     overflow: hidden;
-}
-
-.blur_ball_1 {
-    position: absolute;
-    top: -3rem;
-    right: -3rem;
-    background-color: #79fff8;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    z-index: 1;
-    filter: blur(4rem);
-}
-
-.blur_ball_2 {
-    position: absolute;
-    bottom: -3rem;
-    left: -3rem;
-    background-color: #79fff8;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    z-index: 1;
-    filter: blur(4rem);
-}
-
-.blur_ball_3 {
-    position: absolute;
-    top: -3rem;
-    left: 0;
-    background-color: #79fff83f;
-    width: 50rem;
-    height: 25rem;
-    border-radius: 50%;
-    z-index: 1;
-    filter: blur(6rem);
-}
-
-.blur_ball_4 {
-    position: absolute;
-    bottom: 10rem;
-    right: 10rem;
-    background-color: #79fff8;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    z-index: 1;
-    filter: blur(2rem);
 }
 
 .name h1 {
     font-size: 150px;
+    font-weight: 100;
     margin: 0;
-    color: #ffffff;
-    line-height: 12rem;
-    font-family: 'Unbounded';
+    color: #c2ff32;
+    font-family: 'Squada One';
     position: relative;
-    overflow: hidden;
     z-index: 10;
 }
 
 .name h2 {
-    font-size: 60px;
+    font-size: 56px;
     margin: 0;
-    background: -webkit-linear-gradient(0deg, #bffffc, #79fff8, #12938c);
+    background: linear-gradient(to right, #565656, #848484, #9d9d9d, #c2c2c2, #e6e6e6, #ffffff, #e6e6e6, #c2c2c2, #9d9d9d, #848484, #565656);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    line-height: 4rem;
     z-index: 10;
+    animation: h2_gradient 3s ease-in infinite;
 }
 
+/* MAIN */
+
+main h1 {
+    font-size: 80px;
+    color: #c2ff32;
+    font-family: 'Squada One';
+}
+
+main h2 {
+    font-size: 40px;
+    color: #ffffff;
+}
+
+/* SOBRE MI */
+
+.container_sobremi {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    padding-left: 5rem;
+}
+
+.mask_1 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur(4rem);
+    background-image: radial-gradient(ellipse farthest-corner at 45px 30px , transparent 71%, #dbdbdb80 29%);
+}
+
+.mask_2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(ellipse farthest-corner at 45px 30px , transparent 71%, #141414 29%);
+    z-index: 5;
+}
+
+.sobremi {
+    text-align: justify;
+    width: 40%;
+    z-index: 2;
+}
+
+.sobremi p {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.photo {
+    width: 60%;
+    height: 100%;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.blur_ball_1 {
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    background-color: #9f9f9f80;
+    width: 30%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(10rem);
+}
+
+
 /* DRONES */
+
+.container_drones {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    position: relative;
+}
+
+.bg_solid {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, #141414, #141414, #141414, #141414, transparent);
+    z-index: 2;
+}
+
+.bg_blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    background-color: #dbdbdb80;
+    z-index: 1;
+    filter: blur(4rem);
+}
 
 .drones {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 5rem;
+    justify-content: space-between;
+    z-index: 100;
+    padding-bottom: 10rem;
 }
 
 .cinequeen {
-    width: 50rem;
+    width: 45%;
     position: relative;
-    margin: 1rem;
+    overflow: hidden;
+    border-radius: 1rem;
 }
 
-.dji {
-    width: 50rem;
-    aspect-ratio: 16/9;
+.atom {
+    width: 45%;
     position: relative;
-    margin: 1rem;
-}
-
-.drone_title {
-    color: #79fff8;
-}
-
-.drone_title h1 {
-    font-size: 60px;
-    margin: 0;
+    overflow: hidden;
+    border-radius: 1rem;
 }
 
 .bg_video {
     width: 100%;
     height: 100%;
+    aspect-ratio: 16/9;
     object-fit: cover;
-    border-radius: 1rem;
+    z-index: 1;
+    color: #dddddd;
+}
+
+.drones h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 10%;
+    background-color: #0000006f;
+    margin: 0;
+    padding: 1rem;
+    font-size: 50px;
+}
+
+.drone_info {
+    color: #000000;
+    background-color: #dddddd;
+}
+
+.drone_info ul {
+    list-style: none;
+    padding: 5%;
+    margin: 0;
+}
+
+.drone_info ul li {
+    font-size: 30px;
+    margin: 5% 0%;
+}
+
+.drone_info ul li span {
+    font-weight: bold;
+}
+
+.title_drones {
+    z-index: 10;
+}
+
+/* PORTAFOLIO */
+
+.container_portfolio {
+    padding: 3rem;
+}
+
+.container_videos {
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+}
+
+.video {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.video video {
+    width: 100%;
+}
+
+.one {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.two {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.three {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.four {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.five {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.six {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #000000;
+    width: 100%;
+    height: 10rem;
+    margin-top: 5rem;
 }
 
 /* ANIMACIONES */
@@ -280,77 +425,32 @@ header {
     }
 }
 
+@keyframes h2_gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: -200% 0%;
+    }
+}
+
 /* RESPONSIVE */
 
+@media (max-width: 1750px) {
+
+    /* DRONES */
+
+    .drones h2 {
+        font-size: 45px;
+    }
+
+    .drone_info ul li {
+        font-size: 25px;
+    }
+
+}
+
 @media (max-width: 1500px) {
-
-    /* Header */
-
-    .name h1 {
-        font-size: 150px;
-        line-height: 10rem;
-    }
-
-    .name h2 {
-        font-size: 50px;
-        line-height: 2.5rem;
-    }
-}
-
-@media (max-width: 1300px) {
-
-    /* Header */
-
-    .name h1 {
-        font-size: 120px;
-        line-height: 8rem;
-    }
-
-    .name h2 {
-        font-size: 40px;
-        line-height: 2rem;
-    }
-}
-
-@media (max-width: 900px) {
-
-    /* Header */
-
-    .name {
-        width: 100%;
-        align-items: flex-start;
-        justify-content: center;
-        line-height: 6rem;
-        background-image: none;
-        padding: 4rem;
-        background-color: rgba(0, 0, 0, 0.5);
-        text-align: left;
-    }
-
-    .name h1 {
-        font-size: 90px;
-        line-height: 6rem;
-    }
-
-    .name h2 {
-        font-size: 30px;
-        line-height: 1.5rem;
-    }
-}
-
-@media (max-width: 750px) {
-
-    /* Header */
-
-    .name h1 {
-        font-size: 70px;
-        line-height: 5rem;
-    }
-
-    .name h2 {
-        font-size: 24px;
-        line-height: 1rem;
-    }
 
     /* Nav */
 
@@ -361,14 +461,306 @@ header {
     }
 
     .menu ul {
-        font-size: 18px;
-        width: 12rem;
         height: 3rem;
-        padding: 0.2rem;
+        font-size: 20px;
+        padding: 0.5rem;
         padding-left: 3rem;
-        padding-right: 14rem;
+        padding-right: 6rem;
     }
 
+    /* Header */
+
+    .name h1 {
+        font-size: 130px;
+    }
+
+    .name h2 {
+        font-size: 50px;
+    }
+
+    /* Main */
+
+    main h1 {
+        font-size: 60px;
+    }
+
+    /* Sobre mi */
+
+    .sobremi p {
+        font-size: 25px;
+    }
+
+    /* DRONES */
+
+    .drones h2 {
+        font-size: 35px;
+    }
+
+    .drone_info ul li {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    /* Nav */
+
+    .container_open, .container_close {
+        width: 2rem;
+        height: 2rem;
+        padding: 0.5rem;
+    }
+
+    .menu ul {
+        height: 2rem;
+        font-size: 16px;
+        padding: 0.5rem;
+        padding-left: 2rem;
+        padding-right: 4rem;
+    }
+
+
+    /* Header */
+
+    .name h1 {
+        font-size: 110px;
+    }
+
+    .name h2 {
+        font-size: 42px;
+    }
+
+    /* Main */
+
+    main h1 {
+        font-size: 50px;
+    }
+
+    /* Sobre mi */
+    
+    .sobremi p {
+        font-size: 20px;
+    }
+
+    /* DRONES */
+
+    .drones h2 {
+        font-size: 30px;
+    }
+
+    .drone_info ul li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    /* Header */
+
+    .name h1 {
+        font-size: 80px;
+    }
+
+    .name h2 {
+        font-size: 30px;
+    }
+
+    /* Main */
+
+    main h1 {
+        font-size: 40px;
+    }
+
+    /* Sobre mi */
+
+    .container_sobremi {
+        height: 50vh;
+        padding: 2rem;
+    }
+
+    .blur_ball_5 {
+         width: 20rem;
+         height: 20rem;
+    }
+    
+    .sobremi p {
+        font-size: 15px;
+    }
+
+    /* Drones */
+
+    .container_drones {
+        padding: 2rem;
+    }
+
+    .drones h2 {
+        font-size: 24px;
+    }
+
+    .drone_info ul li {
+        font-size: 12px;
+    }
+
+    /* Portafolio */
+
+    .one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .two {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .three {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .four {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    
+    .five {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .six {
+        grid-column: 2;
+        grid-row: 3;
+    }
+}
+
+@media (max-width: 750px) {
+
+    /* Nav */
+
+    .container_open, .container_close {
+        width: 1rem;
+        height: 1rem;
+        padding: 0.5rem;
+    }
+
+    .menu ul {
+        height: 1rem;
+        font-size: 12px;
+        padding: 0.5rem;
+        padding-left: 2rem;
+        padding-right: 3rem;
+    }
+
+    /* Header */
+
+    header {
+        height: 80vh;
+    }
+
+    .name {
+        padding: 4rem;
+    }
+
+    .name h1 {
+        font-size: 70px;
+    }
+
+    .name h2 {
+        font-size: 27px;
+    }
+
+    .blur_ball_1 {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .blur_ball_2 {
+        width: 10rem;
+        height: 10rem;
+    }
+    
+    .blur_ball_3 {
+        width: 25rem;
+        height: 15rem;
+    }
+    
+    .blur_ball_4 {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /* Main */
+
+    main h1 {
+        font-size: 30px;
+    }
+
+    /* Sobre mi */
+
+    .container_sobremi {
+        height: 70vh;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .blur_ball_5 {
+         width: 20rem;
+         height: 20rem;
+    }
+
+    .sobremi {
+        width: 100%;
+    }
+    
+    .sobremi p {
+        font-size: 10px;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    .mask_1 {
+        display: none;
+    }
+    
+    .mask_2 {
+        display: none;
+    }
+
+    /* DRONES */
+
+    .container_drones {
+        height: 70vh;
+    }
+
+    .drones {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .drones h2 {
+        font-size: 18px;
+    }
+
+    .drone_info ul li {
+        font-size: 8px;
+    }
+
+    .cinequeen {
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin: 1rem;
+    }
+
+    .atom {
+        width: 100%;
+        aspect-ratio: 16/9;
+        margin: 1rem;
+    }
+
+    /* PORTAFOLIO */
 
 }
 
@@ -382,7 +774,48 @@ header {
     }
 
     .name h2 {
-        font-size: 17px;
-        line-height: 0.5rem;
+        font-size: 18.5px;
+    }
+
+    /* DRONES */
+
+    .drones h2 {
+        font-size: 12px;
+    }
+
+    .drone_info ul li {
+        font-size: 6px;
+    }
+
+    /* PORTAFOLIO */
+
+    .one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .two {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .three {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    
+    .four {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    
+    .five {
+        grid-column: 1;
+        grid-row: 5;
+    }
+    
+    .six {
+        grid-column: 1;
+        grid-row: 6;
     }
 }

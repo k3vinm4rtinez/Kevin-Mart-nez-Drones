@@ -25,3 +25,7 @@ close.addEventListener("click", function(){
     open.style.animation = "rotateRight 0.5s linear";
 
 })
+
+// DRONES CARDS
+
+

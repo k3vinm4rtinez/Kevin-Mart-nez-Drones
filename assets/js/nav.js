@@ -9,6 +9,7 @@ const divPortafolio = document.querySelector(".container_portfolio").getBounding
 navSobremi.addEventListener('click', () => window.scrollTo({
     top: divSobremi,
     behavior: "smooth"
+
 }));
 
 navDrones.addEventListener('click', () => window.scrollTo({

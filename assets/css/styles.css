@@ -613,6 +613,10 @@ footer {
 
     /* Portafolio */
 
+    .container_portfolio {
+        padding: 2rem;
+    }
+
     .one {
         grid-column: 1;
         grid-row: 1;
